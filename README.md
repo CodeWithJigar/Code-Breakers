@@ -11,4 +11,23 @@ Are you ready to become a true Code Breaker? The adventure awaits!
 
 By: Meghesh N. Nagpure
 
+Game UI
+
+
+![alt text](/UI%20Screenshots/image.png)
+
+![alt text](/UI%20Screenshots/image-1.png)
+
+![alt text](/UI%20Screenshots/image-2.png)
+
+![alt text](/UI%20Screenshots/image-3.png)
+
+![alt text](/UI%20Screenshots/image-4.png)
+
+![alt text](/UI%20Screenshots/image-5.png)
+
+![alt text](/UI%20Screenshots/image-6.png)
+
+![alt text](/UI%20Screenshots/image-7.png)
+
  
