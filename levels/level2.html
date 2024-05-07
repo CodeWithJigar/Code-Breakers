@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Code Breaker : Level 2</title>
+        <link rel="stylesheet" href="level2.css">
+        
+    
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <audio id="backgroundaudio" src="/audio/backgroundaudio5.mp3" autoplay loop></audio>
+        <div id="level">
+            <p id="levelnumber">LEVEL 2</p>
+            <button id="hint-btn">Hint</button>
+            <!-- <a href="hint1.html" target="_blank"><button id="hint-btn">Hint</button></a> -->
+            <audio src="/audio/timelost.mp3" id="hintlostaudio"></audio>
+        </div>
+        <div id="popup" class="popup">
+            <!-- Content of the pop-up -->
+            <button class="close-button" id="closeButton">X</button>
+            <div id="hintconsequence">You lost 20 sec</div>
+            <div id="hintpage">
+                <p>Hint Page</p>
+                <hr>
+                <p>A binary search tree follows some order to arrange the elements. In a Binary search tree, the value of left node must be smaller than the parent node, and the value of right node must be greater than the parent node. This rule is applied recursively to the left and right subtrees of the root.</p>
+                <img src="/hint-images/hint1.png" alt="hint1">
+                <p>As 79 is greater than 45, so insert it as the root node of the right subtree</p>
+            </div>
+        </div>
+        <div class="overlay" id="overlay"></div>
+        <p id="question">Construct Binary Search Tree : 15, 10, 23, 6, 14, 20, 35, 7, 12, 15, 27, 11, 13, 25, 28</p>
+        <div id="timer"></div>
+        <div id="board"></div>
+        <h2>Turns: <span id="turns">0</span></h2>
+        <div id="pieces"></div>
+        <p id="pwdgen">Pwd: Mid 3 nums ( Inorder traversal ) + Concat (leaf nodes of subtree of node 14) + Min turns</p>
+        <p id="pass">Enter password: </p>
+        <input id="pwd" type="password">
+        <div id="creator"> By : Meghesh Nagpure & Jigar Shah </div>
+
+
+
+        <script src="level2.js"></script> 
+    </body>
+</html>

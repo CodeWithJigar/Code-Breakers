@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Breaker</title>
+    <link rel="stylesheet" href="puzzle.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <audio id="backgroundaudio" src="/audio/backgroundaudio2.opus" autoplay loop></audio>
+
+    <br>
+    <p id="heading">CODE BREAKERS</p>
+    <button id="instructions">Instructions</button>
+    <a href="level1.html"><button id="startgame">Start Game</button></a>
+
+    <div id="popup" class="popup">
+        <!-- Content of the pop-up -->
+        <button class="close-button" id="closeButton">X</button>
+        <div id="hintconsequence">INSTRUCTIONS</div>
+        <div id="instructions-page">
+            <p><b><i>WELCOME TO CODE BREAKERS !!! It is a data structures based, escape room game !!!</i></b></p>
+            <hr>
+            <div id="inst-content">
+                <p><b><u>STEP 1</u></b> : Construct Binary Search Tree (BST) using jigsaw puzzle. This puzzle has two
+                    components - board
+                    and pieces. To construct BST, pick up the pieces one by one and place each piece at its respective
+                    correct position within minimum moves possible.</p>
+                <p><b><u>STEP 2</u></b> : Generate password using secret information from the constructed BST.</p>
+                <p><b><u>STEP 3</u></b> : Enter password and Escape.</p>
+            </div>
+        </div>
+        <div id="hintconsequence">REMEMBER</div>
+        <div id="instructions-page">
+            <div id="inst-content">
+                <p><b>1. <u>Time Contraint</u> - </b> Construct BST, generate password and escape within the given time
+                    limit. If you fail
+                    to do so, you loose.</p>
+                <p><b>2. <u>Hint</u> - </b> You can see the hint. But you will loose 20 sec.</p>
+                <p><b>3. <u>Scroll</u> - </b> You can scroll to view different parts of the game.</p>
+            </div>
+        </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <div id="creator"> By : Meghesh Nagpure & Jigar Shah </div>
+
+
+    <script>
+        const popupButton = document.getElementById('instructions');
+        const popup = document.getElementById('popup');
+        const closeButton = document.getElementById('closeButton');
+        const overlay = document.getElementById('overlay');
+
+        popupButton.addEventListener('click', function () {
+            // Show the pop-up
+            popup.style.display = 'block';
+            overlay.style.display = 'block';
+        });
+
+        closeButton.addEventListener('click', function () {
+            // Close the pop-up when close button is clicked
+            popup.style.display = 'none';
+            overlay.style.display = 'none';
+        });
+
+        popup.addEventListener('click', function (event) {
+            // Close the pop-up if user clicks outside of it
+            if (event.target === popup) {
+                popup.style.display = 'none';
+                overlay.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>
