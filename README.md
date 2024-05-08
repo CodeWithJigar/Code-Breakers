@@ -9,7 +9,7 @@ But this isn't just a game – it's an immersive experience that transports you 
 Are you ready to become a true Code Breaker? The adventure awaits!
 
 
-By: Meghesh N. Nagpure
+By: Meghesh N. Nagpure & Jigar Shah
 
 Game UI
 
