@@ -2,7 +2,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     color: white;
-    background-image: url(/backgroung-images/background3.jpg);
+    background-image: url(../backgroung-images/background3.jpg);
     background-size: contain;
     background-position: cover;
     font-size: 1.2rem;
@@ -21,24 +21,46 @@ body {
 
 @font-face {
     font-family: myFirstFont;
-    src: url(/font/Bubblegum.ttf);
+    src: url(../font/Bubblegum.ttf);
 }
 
 @font-face {
     font-family: myFirstFont1;
-    src: url(/font/Constance-7BLXE.otf);
+    src: url(../font/Constance-7BLXE.otf);
 }
 
 @font-face {
     font-family: myFirstFont2;
-    src: url(/font/Plexiglass.ttf);
+    src: url(../font/Plexiglass.ttf);
 }
 
+@font-face {
+    font-family: myFirstFont3;
+    src: url(../font/Montserrat-VariableFont_wght.ttf);
+}
 #heading{
     margin-top: 3rem;
     margin-bottom: 5rem;
     font-size: 12rem;
     font-family: myFirstFont2;
+}
+
+#playPause {
+    /* Icon styles */
+    float: right;
+    border-style: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-image: url("../icons/pause.png");
+    background-repeat: no-repeat; /* Optional: controls how the image repeats */
+    background-size: cover;
+    /* margin-right: 10px; */
+}
+
+#playPause.played {
+background-image: url("../icons/play.png");
+background-repeat: no-repeat; /* Optional: controls how the image repeats */
+background-size: cover;
 }
 
 #level{
@@ -76,21 +98,31 @@ body {
 }
 
 #hintpage{
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+}
+
+#instructions-page{
+    font-size: 1.3rem;
     border: 2px solid black;
     background-color: black;
-    /* height: 33rem; */
+    font-family: myFirstFont3;
+
+}
+
+#inst-content{
+    font-size: 1.1rem;
+    text-align: left;
 }
 
 #question{
-    margin-top: 5rem;
+    margin-top: 4rem;
     font-size: 1.5rem;
     font-family: myFirstFont1;
 }
 
 #pwdgen{
-    margin-top: 8rem;
-    font-size: 1.7rem;
+    margin-top: 4rem;
+    font-size: 1.5rem;
     font-family: myFirstFont1;
     text-shadow: 1rem 0.5rem 1rem rgb(197, 115, 197);
 }
@@ -110,12 +142,18 @@ body {
 #pass{
     margin-top: 6rem;
 }
+#board-pieces{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+}
+
 #board {
-    width: 441px;
-    height: 441px;
+    width: 452px;
+    height: 452px;
     border: 5px solid rgb(89, 9, 89);
     /* box-shadow: 0.5rem 0.5rem 0.4rem rgb(47, 14, 47); */
-
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -127,10 +165,11 @@ body {
     border: 0.5px solid lightblue;
 }
 
-
 #pieces {
-    width: 1315px;
-    height: 84px;
+    /* width: 1315px;
+    height: 84px; */
+    width: 452px;
+    height: 452px;
     border: 5px solid  rgb(89, 9, 89);
 
     margin: 0 auto;
@@ -139,8 +178,8 @@ body {
 }
 
 #pieces img {
-    width: 80px;
-    height: 80px;
+    width: 86px;
+    height: 86px;
     border: 0.5px solid lightblue;
     background-color: black;
 }
@@ -163,6 +202,7 @@ body {
     background-color: red;
     font-size: 2rem;
     padding: 1rem;
+    margin-bottom: 1rem;
 }
 
 
@@ -217,6 +257,25 @@ body {
   transform: translate(2px, 2px);
 }
 
+#instructions{
+    height: 3rem;
+    width: 16rem;
+    font-size: 1.5rem;
+    text-align: center;
+    border: 2px solid black;
+    box-shadow: 1rem 1rem 1rem rgb(0, 0, 0);
+    font-family: myFirstFont1;
+    background-color: rgb(234, 118, 92);
+    cursor: pointer;
+    touch-action: manipulation;
+    margin-bottom: 8.9rem;
+}
+
+#instructions:not([disabled]):active {
+    box-shadow: #3b2a2a 2px 2px 0 0, #000 2px 2px 0 1px;
+    transform: translate(2px, 2px);
+}
+
 
 #startgame{
     height: 3rem;
@@ -230,6 +289,7 @@ body {
     cursor: pointer;
     touch-action: manipulation;
     margin-bottom: 8.9rem;
+    margin-left: 1rem;
 }
 
 #startgame:not([disabled]):active {
@@ -275,4 +335,3 @@ body {
     z-index: 999; /* Ensure the overlay is behind the pop-up */
     display: none; /* Hide the overlay by default */
 }
-

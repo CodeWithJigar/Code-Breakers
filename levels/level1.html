@@ -15,12 +15,12 @@
 </head>
 
 <body>
-    <audio id="backgroundaudio" src="/audio/backgroundaudio2.opus" autoplay loop></audio>
+    <audio id="backgroundaudio" src="../audio/backgroundaudio2.opus" autoplay loop></audio>
     <div id="level">
         <p id="levelnumber">LEVEL 1</p>
         <button id="hint-btn">Hint</button>
         <!-- <a href="hint1.html" target="_blank"><button id="hint-btn">Hint</button></a> -->
-        <audio src="/audio/timelost.mp3" id="hintlostaudio"></audio>
+        <audio src="./audio/timelost.mp3" id="hintlostaudio"></audio>
     </div>
     <div id="popup" class="popup">
         <!-- Content of the pop-up -->
@@ -32,7 +32,7 @@
             <p>A binary search tree follows some order to arrange the elements. In a Binary search tree, the value of
                 left node must be smaller than the parent node, and the value of right node must be greater than the
                 parent node. This rule is applied recursively to the left and right subtrees of the root.</p>
-            <img src="/hint-images/hint1.png" alt="hint1">
+            <img src="../hint-images/hint1.png" alt="hint1">
             <p>As 79 is greater than 45, so insert it as the root node of the right subtree</p>
         </div>
     </div>
@@ -52,7 +52,7 @@
     <p id="pwdgen">Pwd: First 5 nums ( Inorder traversal ) + Concat ( all leaf nodes ) + Min turns</p>
     <p id="pass">Enter password: </p>
     <input id="pwd" type="password">
-    <div id="creator"> By : Meghesh Nagpure & Jigar Shah </div>
+    <div id="creator"> By : Meghesh Nagpure & Jigar Shah <button id="playPause"></button></div>
 
 
 

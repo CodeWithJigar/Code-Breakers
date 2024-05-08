@@ -144,6 +144,24 @@ function playbackgroundAudio(){
     backgroundaudio.play();
 }
 
+const audioElement = document.getElementById("backgroundaudio");
+const playPauseButton = document.getElementById("playPause");
+let isPlaying = false; // Keeps track of play/pause state
+
+playPauseButton.addEventListener("click", function () {
+  isPlaying = !isPlaying; // Toggle state on click
+  audioElement.muted = false;
+
+  if (!isPlaying) {
+    playPauseButton.classList.add("played"); // Add pause class
+    console.log("play");
+    audioElement.play();
+  } else {
+    playPauseButton.classList.remove("played"); // Remove pause class
+    console.log("pause");
+    audioElement.pause();
+  }
+});
 
 document.getElementById("pwd").addEventListener("keypress", function(event) {
     // Check if the Enter key was pressed
@@ -154,7 +172,7 @@ document.getElementById("pwd").addEventListener("keypress", function(event) {
         // Check if the password is equal to "28196"
         if (password === "252855") {
             if(25 <= turns && turns <=35){
-                window.location.href = "win.html";
+                window.location.href = "win2.html";
             }else{
                 alert("Complete in Minimum number of turns")
             }
