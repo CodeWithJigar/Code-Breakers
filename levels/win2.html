@@ -1,27 +1,38 @@
-
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Code Breaker</title>
-        <link rel="stylesheet" href="puzzle.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Breaker</title>
+    <link rel="stylesheet" href="puzzle.css" />
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap" rel="stylesheet">
-    </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-    <body>
-        <br>
-        <audio id="backgroundaudio" src="/audio/win.mp3" autoplay></audio>
-        <p id="lostHeading">CODE BREAKER</p>
-        <p id="lost">You Won !!! ESCAPED</p>
-        <a href="../index.html"><button id="playagain">Play Next</button></a>
+  <body>
+    <br />
+    <audio id="backgroundaudio" src="../audio/win.mp3" autoplay></audio>
+    <p id="lostHeading">CODE BREAKER</p>
+    <p id="lost">You Won !!! ESCAPED</p>
+    <a href="../index.html"><button id="playagain">Play Next</button></a>
 
-        <div id="creator"> By : Meghesh Nagpure & Jigar Shah </div>
+    <div id="creator">By : Meghesh Nagpure & Jigar Shah</div>
 
-    
-        <script src="puzzle.js"></script>
-    </body>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (document.hasFocus()) {
+          const audioElement = document.getElementById("backgroundaudio");
+          setTimeout(function () {
+            audioElement.play();
+          }, 2000);
+        }
+      });
+    </script>
+    <script src="puzzle.js"></script>
+  </body>
 </html>
